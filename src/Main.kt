@@ -13,7 +13,7 @@ fun main() {
 
     for(i in 0..9){
 
-        var numero = Random.nextInt(0,50)
+        var numero = Random.nextInt(1,51)
         println("Numero sorteado $numero")
 
         if(numero % 2 == 0){
