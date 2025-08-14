@@ -39,9 +39,8 @@ fun main() {
     var p3 = Pessoa("Patricia", 29, "Contadora")
     val pessoas = mutableListOf(p1,p2,p3)
 
-
     for(i in pessoas){
-       println("${i.nome},${i.idade}, ${i.profissao}")
+      println("${i.nome},${i.idade}, ${i.profissao}")
     }
 
     // Exercício 4
@@ -59,20 +58,41 @@ fun main() {
     var numero = scanner.nextInt()
 
     if(numero == 1){
-        println("Digite o novo valor: ")
-        val novoValor = scanner.nextDouble()
-        produtos[0].preco = novoValor
-        println("Qual a nova quantidade?")
-        val novaQuantidade = scanner.nextInt()
-        produtos[0].quantidade = novaQuantidade
+        println("O que você deseja alterar? " +
+                "\n[1] Preço " +
+                "\n[2] Quantidade")
+        var n1 = scanner.nextInt()
+        if(n1 == 1){
+            println("Digite o novo valor: ")
+            val novoValor = scanner.nextDouble()
+            produtos[0].preco = novoValor
+
+        }else if (n1 == 2){
+            println("Qual a nova quantidade?")
+            val novaQuantidade = scanner.nextInt()
+            produtos[0].quantidade = novaQuantidade
+        }else{
+            println("Resposta inválida!")
+        }
+
         println("Produto alterado!")
     }else if (numero == 2){
-        println("Digite o novo valor: ")
-        val novoValor = scanner.nextDouble()
-        produtos[1].preco = novoValor
-        println("Qual a nova quantidade?")
-        val novaQuantidade = scanner.nextInt()
-        produtos[1].quantidade = novaQuantidade
+        println("O que você deseja alterar? " +
+                "\n[1] Preço " +
+                "\n[2] Quantidade")
+        var n2 = scanner.nextInt()
+        if(n2 == 1){
+            println("Digite o novo valor: ")
+            val novoValor = scanner.nextDouble()
+            produtos[1].preco = novoValor
+        }else if(n2 ==2){
+            println("Qual a nova quantidade?")
+            val novaQuantidade = scanner.nextInt()
+            produtos[1].quantidade = novaQuantidade
+        }else {
+            println("Resposta inválida!")
+        }
+
         println("Produto Alterado")
     }
 
